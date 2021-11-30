@@ -1,4 +1,8 @@
-.bg-faded {
+img {
+    width: 100%;
+}
+
+.bg-faded{
     background-color: hsla(0,0%,100%,.85);
 }
 
@@ -6,17 +10,29 @@
     position: relative;
 }
 
+
 @media (min-width: 992px){
-    .intro .intro-text {
-        left: 0;
-        width: 50%;
-        margin-top: 8rem;
-        position: fixed;
-        
-    }
-    .intro .intro-img{
+    .intro .intro-img {
         width: 100%;
+        height: auto;
         float: right;
     }
-}
+    
+    .intro {
+        display: flex;
+        align-items: center;
+    }
 
+    .intro .intro-text {
+        left: 0;
+        width: 60%;
+        position: absolute;
+        box-sizing: border-box;
+    }
+    .intro .intro-text-r {
+        right: 0;
+        width: 60%;
+        position: absolute;
+        box-sizing: border-box;
+    }
+}

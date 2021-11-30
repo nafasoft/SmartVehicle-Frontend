@@ -1,3 +1,4 @@
+
 .icon{
     font-size: 35px;
     color: white;
@@ -6,4 +7,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
+}
+
+@media (max-width:600px) {
+    .fixed-top{
+        position: relative;
+    } 
+    .icon{
+        color: grey;
+    }
 }

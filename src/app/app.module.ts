@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+//Servicio de cargar scripts
+import { CargarScriptsService } from './cargar-scripts.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,8 +9,7 @@ import { HeaderComponent } from './plantilla/header/header.component';
 import { FooterComponent } from './plantilla/footer/footer.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { ErrorComponent } from './plantilla/error/error.component';
-import { MisionComponent } from './plantilla/mision/mision.component';
-import { VisionComponent } from './plantilla/vision/vision.component';
+import { ContactoComponent } from './plantilla/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,13 @@ import { VisionComponent } from './plantilla/vision/vision.component';
     FooterComponent,
     InicioComponent,
     ErrorComponent,
-    MisionComponent,
-    VisionComponent
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CargarScriptsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
