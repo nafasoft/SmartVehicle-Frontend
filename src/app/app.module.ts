@@ -10,6 +10,8 @@ import { FooterComponent } from './plantilla/footer/footer.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import { ContactoComponent } from './plantilla/contacto/contacto.component';
+import { RegistreseComponent } from './plantilla/registrese/registrese.component';
+import { LoginComponent } from './plantilla/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ContactoComponent } from './plantilla/contacto/contacto.component';
     FooterComponent,
     InicioComponent,
     ErrorComponent,
-    ContactoComponent
+    ContactoComponent,
+    RegistreseComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
