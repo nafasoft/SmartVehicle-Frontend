@@ -1,0 +1,21 @@
+.bg-faded {
+    background-color: hsla(0,0%,100%,.85);
+}
+
+.intro{
+    position: relative;
+}
+
+@media (min-width: 992px){
+    .intro .intro-text {
+        left: 0;
+        width: 50%;
+        margin-top: 8rem;
+        position: fixed;
+        
+    }
+    .intro .intro-img{
+        width: 100%;
+        float: right;
+    }
+}
