@@ -1,1 +1,46 @@
-<p>login works!</p>
+<div class="contenedor bg-primary">
+    <div class="contenedor-formulario bg-faded" >
+      <div class="d-flex justify-content-center align-items-center py-3">
+        <h3>Iniciar Sesión</h3>
+    </div>
+        <form class="needs-validation mx-2 mb-2 d-flex flex-column align-items-center" novalidate>
+            <div class="row g-3 ms-4" style="padding-left: 10px;">
+                <div class="col-auto">
+                    <label for="validationEmail" class="col-form-label">Email</label>
+                </div>
+                <div class="col-auto">
+                    <input type="email" class="form-control" id="validationEmail" placeholder="Correo electronico" required>
+                    <div class="invalid-feedback">
+                        Por favor ingrese su correo electronico.
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mt-2 acomodation">
+                <div class="col-auto">
+                    <label for="validationPassword" class="col-form-label">Contraseña</label>
+                </div>
+                <div class="col-auto">
+                    <input type="password" class="form-control" id="validationPassword" placeholder="Escriba su contraseña" required>
+                    <div class="invalid-feedback">
+                        Por favor ingrese una contraseña.
+                    </div>
+                </div>
+            </div> 
+            <div class="col-auto ms-3 mt-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                    <label class="form-check-label" for="invalidCheck">
+                    Recuerdame
+                    </label>
+                </div>
+            </div>
+            <div class="mb-2">
+                <a class="text-danger">¿Olvido su contraseña?</a>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+            <button class="btn btn-success btn-lg" type="submit">Ingresar</button>
+            </div>
+        </form>
+    </div>
+</div>
+  
