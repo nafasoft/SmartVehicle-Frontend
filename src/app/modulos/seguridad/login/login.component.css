@@ -64,48 +64,6 @@
 .login-clean form .forgot:hover, .login-clean form .forgot:active {
     opacity: 1;
     text-decoration: none;
-  }
-  
-  
-  
-  
-  
-  
-
-
-.bg-faded{
-    background-color: hsla(0,0%,100%,.85);
 }
-
-.contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.contenedor-formulario{
-    border-radius: 10px;
-    width: 50%;
-    margin: 80px 0 80px;
-}
-
-@media(max-width: 600px){
-    .contenedor {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-    .contenedor-formulario{
-        border-radius: 10px;
-        width: 94%;
-        margin: 10px 0 10px;
-    }
-}
-
-@media(max-width:340px){
-    .acomodation {
-        margin-left: 35px;
-    }
-}
+    
+  

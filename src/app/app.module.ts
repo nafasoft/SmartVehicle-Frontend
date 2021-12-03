@@ -10,7 +10,6 @@ import { FooterComponent } from './plantilla/footer/footer.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import { ContactoComponent } from './plantilla/contacto/contacto.component';
-import { RegistreseComponent } from './plantilla/registrese/registrese.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -22,9 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     InicioComponent,
     ErrorComponent,
-    ContactoComponent,
-    RegistreseComponent
-    
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

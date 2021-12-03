@@ -6,13 +6,15 @@ import { LoginComponent } from './login/login.component';
 import { CambiarClaveComponent } from './cambiar-clave/cambiar-clave.component';
 import { RecuperarClaveComponent } from './recuperar-clave/recuperar-clave.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     CambiarClaveComponent,
-    RecuperarClaveComponent
+    RecuperarClaveComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,

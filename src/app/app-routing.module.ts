@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactoComponent } from './plantilla/contacto/contacto.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
-import { RegistreseComponent } from './plantilla/registrese/registrese.component';
+import { RegistreseComponent } from './modulos/seguridad/registrese/registrese.component';
 
 
 const routes: Routes = [
@@ -16,10 +16,6 @@ const routes: Routes = [
     component: ContactoComponent
   },
   {
-    path: "registrese",
-    component: RegistreseComponent
-  },
-  {
     path:"",
     pathMatch: 'full',
     redirectTo: '/inicio'
@@ -27,6 +23,18 @@ const routes: Routes = [
   {
     path: "seguridad",
     loadChildren : () => import("./modulos/seguridad/seguridad.module").then(x => x.SeguridadModule)
+  },
+  {
+    path: "administracion",
+    loadChildren : () => import("./modulos/administracion/administracion.module").then(x => x.AdministracionModule)
+  },
+  {
+    path: "asesor",
+    loadChildren : () => import("./modulos/asesor/asesor.module").then(x => x.AsesorModule)
+  },
+  {
+    path: "cliente",
+    loadChildren : () => import("./modulos/cliente/cliente.module").then(x => x.ClienteModule)
   },
   {
     path: '**',
