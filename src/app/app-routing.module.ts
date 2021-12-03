@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactoComponent } from './plantilla/contacto/contacto.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
-import { LoginComponent } from './plantilla/login/login.component';
 import { RegistreseComponent } from './plantilla/registrese/registrese.component';
 
 
@@ -21,13 +20,13 @@ const routes: Routes = [
     component: RegistreseComponent
   },
   {
-    path: "login",
-    component: LoginComponent
-  },
-  {
     path:"",
     pathMatch: 'full',
     redirectTo: '/inicio'
+  },
+  {
+    path: "seguridad",
+    loadChildren : () => import("./modulos/seguridad/seguridad.module").then(x => x.SeguridadModule)
   },
   {
     path: '**',

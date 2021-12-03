@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 //Servicio de cargar scripts
-import { CargarScriptsService } from './cargar-scripts.service';
+import { CargarScriptsService } from './servicios/cargar-scripts.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +11,9 @@ import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { ErrorComponent } from './plantilla/error/error.component';
 import { ContactoComponent } from './plantilla/contacto/contacto.component';
 import { RegistreseComponent } from './plantilla/registrese/registrese.component';
-import { LoginComponent } from './plantilla/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -21,12 +23,13 @@ import { LoginComponent } from './plantilla/login/login.component';
     InicioComponent,
     ErrorComponent,
     ContactoComponent,
-    RegistreseComponent,
-    LoginComponent
+    RegistreseComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [CargarScriptsService],
   bootstrap: [AppComponent]

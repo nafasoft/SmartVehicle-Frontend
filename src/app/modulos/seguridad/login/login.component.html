@@ -1,0 +1,19 @@
+<section class="login-clean">
+    <form method="post" [formGroup]="fgValidador" (ngSubmit)= "IdentificarUsuario()">
+        <h2 class="visually-hidden">Iniciar Sesión</h2>
+        <div class="illustration">
+            <i class="fas fa-location-arrow"></i>
+        </div>
+        <div class="mb-3 mx-3">
+            <input class="form-control" type="email" placeholder="Email" formControlName="usuario">
+        </div>
+        <div class="mb-3 mx-3">
+            <input class="form-control" type="password" placeholder="Password" formControlName="clave">
+        </div>
+        <div class="mb-3 mx-3">
+            <button class="btn btn-primary d-block w-100" type="submit" [disabled]="!fgValidador.valid">Iniciar sesión</button>
+        </div>
+        <a class="forgot" href="#">¿Olvido su contraseña?</a>
+    </form>
+</section>
+
