@@ -1,95 +1,23 @@
-<div class="contenedor bg-primary">
-    <div class="contenedor-formulario bg-faded" >
-      <div class="d-flex justify-content-center align-items-center py-3">
-        <h3>Registrese</h3>
-    </div>
-        <form class="row g-3 needs-validation mx-2 mb-2" novalidate>
-            <div class="col-md-6">
-            <label for="validationName" class="form-label">Nombres</label>
-            <input type="text" class="form-control" id="validationName" placeholder="Nombres" required>
-            <div class="invalid-feedback">
-                Por favor ingrese sus nombres.
-            </div>
-            </div>
-            <div class="col-md-6">
-            <label for="validationLastName" class="form-label">Apellidos</label>
-            <input type="text" class="form-control" id="validationLastName" placeholder="Apellidos" required>
-            <div class="invalid-feedback">
-                Por favor ingrese sus apellidos.
-            </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationLastName" class="form-label">Documento de identidad</label>
-                <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1">C.C.</span>
-                    <input type="text" class="form-control" id="validationLastName" placeholder="Nro. documento de identidad" required>
-                </div>
-                <div class="invalid-feedback">
-                Por favor ingrese sus apellidos.
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationAge" class="form-label">Edad</label>
-                <input type="number" min="1" class="form-control" id="validationLastAge" placeholder="Años" required>
-                <div class="invalid-feedback">
-                Por favor ingrese su edad en años.
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationGenre" class="form-label">Genero</label>
-                <select class="form-select" aria-label="Default select example" required>
-                    <option selected value="">Seleccione Genero</option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Femenino">Femenino</option>
-                    <option value="Otro">Otro</option>
-                </select>
-                <div class="invalid-feedback">
-                    Por favor seleccione genero.
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationPhone" class="form-label">Telefono</label>
-                <input type="phone" class="form-control" id="validationPhone" placeholder="Telefono" required>
-                <div class="invalid-feedback">
-                Por favor ingrese su telefono de contacto.
-                </div>
-            </div>
-            <div class="col-md-12">
-                <label for="validationAddress" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="validationAddress" placeholder="Direccion" required>
-                <div class="invalid-feedback">
-                Por favor ingrese una dirección.
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationEmail" class="form-label">Correo Electronico</label>
-                <input type="email" class="form-control" id="validationEmail" placeholder="Correo electronico" required>
-                <div class="invalid-feedback">
-                    Por favor ingrese su correo electronico.
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationPassword" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="validationPassword" placeholder="Escriba su contraseña" required>
-                <div class="invalid-feedback">
-                    Por favor ingrese una contraseña.
-                </div>
-            </div>
-            <div class="col-12">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                Acepto terminos y condiciones.
-                </label>
-                <div class="invalid-feedback">
-                Debes estar de acuerdo antes de enviar.
-                </div>
-            </div>
-            </div>
-            <div class="col-12 d-flex justify-content-center">
-            <button class="btn btn-success btn-lg" type="submit">Enviar</button>
-            </div>
-        </form>
-    </div>
-</div>
-  
+<section class="login-clean">
+    <form method="post" [formGroup]="fgValidador" (ngSubmit)= "CrearUsuario()">
+        <h2 class="text-center">Registrese</h2>
+        <div class="illustration">
+            <i class="fas fa-location-arrow"></i>
+        </div>
+        <div class="mb-3 mx-3">
+            <input class="form-control" type="text" placeholder="Nombres" formControlName="nombres">
+        </div>
+        <div class="mb-3 mx-3">
+            <input class="form-control" type="text" placeholder="Apellidos" formControlName="apellidos">
+        </div>
+        <div class="mb-3 mx-3">
+            <input class="form-control" type="phone" placeholder="Telefono" formControlName="telefono">
+        </div>
+        <div class="mb-3 mx-3">
+            <input class="form-control" type="email" placeholder="Correo electronico" formControlName="correo">
+        </div>
+        <div class="mb-3 mx-3">
+            <button class="btn btn-primary d-block w-100" type="submit" [disabled]="!fgValidador.valid">Crear cuenta</button>
+        </div>    
+    </form>
+</section>
