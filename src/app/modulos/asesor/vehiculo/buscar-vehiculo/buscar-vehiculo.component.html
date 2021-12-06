@@ -1,0 +1,61 @@
+<section>
+    <div class="mx-5">
+        <a routerLink="/asesor/crear-vehiculo" class="btn btn-success"><i class="fas fa-car-side"></i>Agregar Vehiculo</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>
+                        Marca
+                    </th>
+                    <th>
+                        Modelo
+                    </th>
+                    <th>
+                        Año
+                    </th>
+                    <th>
+                        Precio
+                    </th>
+                    <th>
+                        Imagen
+                    </th>
+                    <th>
+                        Editar
+                    </th>
+                    <th>
+                        Eliminar
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let v of listadoVehiculos" class="table-secondary">
+                    <td>
+                        {{v.marca}}
+                    </td>
+                    <td>
+                        {{v.modelo}}
+                    </td>
+                    <td>
+                        {{v.anio}}
+                    </td>
+                    <td>
+                        $ {{v.valor}}
+                    </td>
+                    <td>
+                        <img src="{{v.fotografia}}" class="img-vehiculo"/>
+                    </td>
+                    <td>
+                        <a routerLink="/asesor/editar-vehiculo/{{v.id}}" class="btn btn-primary">Editar</a>
+                    </td>
+                    <td>
+                        <a routerLink="/asesor/eliminar-vehiculo/{{v.id}}" class="btn btn-danger">Eliminar</a>
+                    </td>
+    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+

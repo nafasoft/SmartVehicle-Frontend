@@ -1,0 +1,32 @@
+<section class="login-clean">
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarVehiculo()" method="post">
+        <h2 class="text-center">Agregar vehiculo</h2>
+        <div class="illustration">
+            <i class="fas fa-car"></i>
+        </div>
+        <div class="mb-3 mx-3">
+            <input formControlName="marca" class="form-control" type="text" placeholder="Marca"/>
+        </div>
+        <div class="mb-3 mx-3">
+            <input formControlName="modelo" class="form-control" type="text" placeholder="Modelo"/>
+        </div>
+        <div class="mb-3 mx-3">
+            <input formControlName="anio" class="form-control" type="number" min="1990" max="2022" placeholder="Año"/>
+        </div>
+        <div class="mb-3 mx-3">
+            <input formControlName="valor" class="form-control" type="number" placeholder="$Valor"/>
+        </div>
+        <div class="mb-3 mx-3">
+            <input formControlName="tipoDeOferta" class="form-control" type="text" placeholder="Tipo de oferta"/>
+        </div>
+        <div class="mb-3 mx-3">
+            <input formControlName="fotografia" class="form-control" type="text" placeholder="Link de fotografia"/>
+        </div>
+        <div class="mb-3 mx-3">
+            <input formControlName="enlace" class="form-control" type="text" placeholder="Link de video"/>
+        </div>
+        <div class="mb-3 mx-3">
+            <button [disabled]="!fgValidador.valid" class="btn btn-primary d-block w-100" type="submit">Agregar</button>
+        </div>
+    </form>
+</section>
