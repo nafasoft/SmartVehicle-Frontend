@@ -40,7 +40,7 @@ export class SeguridadService {
     }else{
       return null;
     }
-    return;
+
   }
 
   EliminarInformacionSession(){

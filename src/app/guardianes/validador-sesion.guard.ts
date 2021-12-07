@@ -15,13 +15,15 @@ export class ValidadorSesionGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if(this.servicioSeguridad.ObtenerInformacionSesion()){
+    
+      if(this.servicioSeguridad.SeHaIniciadoSesion()){
         return true;
       }else{
         this.router.navigate(['/inicio']);
         return false;
       }
-    
+
   }
+  
   
 }
