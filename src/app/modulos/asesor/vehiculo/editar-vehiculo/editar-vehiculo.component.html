@@ -1,6 +1,6 @@
 <section class="login-clean">
     <form [formGroup]="fgValidador" (ngSubmit)="EditarVehiculo()" method="post">
-        <h2 class="text-center">Agregar vehiculo</h2>
+        <h2 class="text-center">Editar vehiculo</h2>
         <div class="illustration">
             <i class="fas fa-car"></i>
         </div>
@@ -27,7 +27,7 @@
             <input formControlName="enlace" class="form-control" type="text" placeholder="Link de video"/>
         </div>
         <div class="mb-3 mx-3">
-            <button [disabled]="!fgValidador.valid" class="btn btn-primary d-block w-100" type="submit">Agregar</button>
+            <button [disabled]="!fgValidador.valid" class="btn btn-primary d-block w-100" type="submit">Actualizar</button>
         </div>
     </form>
 </section>
